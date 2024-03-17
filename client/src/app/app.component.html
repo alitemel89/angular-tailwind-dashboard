@@ -1,20 +1,20 @@
 <div class="flex h-screen">
     <!-- Sidebar -->
-    <div class="md:w-1/5">
+
         <app-sidebar></app-sidebar>
-    </div>
+
 
 
     <!-- Main Content -->
-    <div class="flex flex-1 flex-col md:w-4/5">
+    <div class="flex flex-1 flex-col sm:ml-64">
 
         <app-navbar></app-navbar>
 
         <!-- Main Content Area -->
-        <main class="overflow-y-auto bg-slate-100 dark:bg-gray-800 z-0">
+        <div class="overflow-y-auto bg-slate-100 dark:bg-gray-800">
             <!-- Your main content goes here -->
             <div>this is home page</div>
             <router-outlet></router-outlet>
-        </main>
+        </div>
     </div>
 </div>

@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-
+  isDarkMode: boolean = false;
+  toggleDarkMode(): void {
+    this.isDarkMode = !this.isDarkMode;
+  }
 }

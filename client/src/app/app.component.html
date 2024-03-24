@@ -1,6 +1,6 @@
 <div class="flex min-h-screen" [class.dark]="isDarkMode">
     <!-- Sidebar -->
-    <app-sidebar></app-sidebar>
+    <app-sidebar class="dark:bg-gray-900"></app-sidebar>
 
     <!-- Main Content -->
     <div class="flex flex-1 flex-col sm:ml-64">
@@ -9,7 +9,7 @@
         <app-navbar></app-navbar>
 
         <!-- Main Content Area -->
-        <main class="flex-1 overflow-y-auto bg-slate-100 dark:bg-gray-700">
+        <main class="flex-1 overflow-y-auto bg-slate-100 dark:bg-gray-600">
             <!-- Your main content goes here -->
             <div class="dark:text-white">this is home page</div>
             <router-outlet></router-outlet>

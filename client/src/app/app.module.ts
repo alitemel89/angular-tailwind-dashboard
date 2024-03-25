@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { StatsComponent } from './stats/stats.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule, 
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

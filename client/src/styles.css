@@ -35,7 +35,7 @@
 
     /* Sidebar Link */
     .sidebar-link {
-        @apply flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+        @apply flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-400 dark:hover:bg-gray-700;
     }
 
     /* Badge */
@@ -57,3 +57,6 @@
 }
 
 @tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { StatsComponent } from './stats/stats.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     SidebarComponent,
     NavbarComponent,
+    StatsComponent,
+    ContactsComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

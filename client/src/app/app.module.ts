@@ -12,6 +12,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     StatsComponent,
     ContactsComponent,
     DashboardComponent,
+    BarChartComponent,
   ],
   imports: [
     BrowserModule,

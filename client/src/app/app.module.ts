@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { SalesCategoryComponent } from './sales-category/sales-category.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
     ContactsComponent,
     DashboardComponent,
     BarChartComponent,
+    SalesCategoryComponent,
   ],
   imports: [
     BrowserModule,

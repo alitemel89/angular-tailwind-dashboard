@@ -20,17 +20,31 @@ export class BarChartComponent implements OnInit {
       data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-          label: 'Sales',
+          label: 'Visitors',
           data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: '#0d9488',
-          borderColor: '#134e4a',
+          backgroundColor: 'rgba(75, 192, 192, 0.7)',
           borderWidth: 1
         }]
       },
       options: {
         scales: {
           y: {
-            beginAtZero: true
+            beginAtZero: true,
+            ticks: {
+              color: '#14b8a6'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#14b8a6'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#14b8a6'
+            }
           }
         }
       }

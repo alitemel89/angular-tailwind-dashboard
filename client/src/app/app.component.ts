@@ -21,6 +21,5 @@ export class AppComponent implements OnInit {
       this.isDarkMode = isDarkMode;
     });
     initFlowbite();
-
   }
 }

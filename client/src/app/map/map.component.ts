@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { loadModules } from 'esri-loader';
-import Sketch from "@arcgis/core/widgets/Sketch"
 import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer";
-import esriConfig from "@arcgis/core/config";
+
 
 
 @Component({
@@ -23,10 +22,7 @@ export class MapComponent implements OnInit {
 
     const graphicsLayer = new GraphicsLayer();
 
-    // Set API key globally
-    esriConfig.apiKey = "AAPK80eece7838f54bb5bbfb1c81cebd3bd38QqcXDUY01jWLO-uzivGOBE9hARZ_91Hjn_5qyYIbd18RzAey-0FBj4lc3pX5S2i";
-
-    loadModules(['esri/Map', 'esri/views/MapView', 'esri/layers/FeatureLayer']).then(([Map, MapView, FeatureLayer]) => {
+    loadModules(['esri/Map', 'esri/views/MapView', 'esri/widgets/Sketch', 'esri/layers/FeatureLayer']).then(([Map, MapView, Sketch, FeatureLayer]) => {
       const map = new Map({
         basemap: 'topo-vector'
       });
@@ -39,10 +35,7 @@ export class MapComponent implements OnInit {
       });
 
       const layer = new FeatureLayer({
-        portalItem: {
-          id: "ef7e45b8cd0a40d29da0718d37b0552e"
-        },
-        url: "https://services6.arcgis.com/WKdqRUJNY2BJpnFr/arcgis/rest/services/power_house_view/FeatureServer/0"
+        url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/USA_Counties/FeatureServer/0"
       });
 
       view.when(() => {

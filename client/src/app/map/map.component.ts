@@ -35,7 +35,7 @@ export class MapComponent implements OnInit {
       });
 
       const layer = new FeatureLayer({
-        url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/USA_Counties/FeatureServer/0"
+        url: "https://services.arcgis.com/ue9rwulIoeLEI9bj/arcgis/rest/services/Germany%20Province%20Boundaries%202022%20update/FeatureServer"
       });
 
       view.when(() => {

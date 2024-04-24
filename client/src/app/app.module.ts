@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { SalesCategoryComponent } from './sales-category/sales-category.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SalesCategoryComponent } from './sales-category/sales-category.componen
     DashboardComponent,
     BarChartComponent,
     SalesCategoryComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,8 +28,8 @@ export class MapComponent implements OnInit {
     const graphicsLayer = new GraphicsLayer();
 
     
-    loadModules(['esri/Map', 'esri/views/MapView', 'esri/widgets/Sketch', 'esri/layers/FeatureLayer'])
-    .then(([Map, MapView, Sketch, FeatureLayer]) => {
+    loadModules(['esri/Map', 'esri/views/MapView', 'esri/widgets/Sketch', 'esri/widgets/Popup', 'esri/layers/FeatureLayer'])
+    .then(([Map, MapView, Sketch, Popup, FeatureLayer]) => {
       this.map = new Map({
         basemap: 'streets-vector'
       });
@@ -54,6 +54,16 @@ export class MapComponent implements OnInit {
           }),
         }),
       });
+
+      // Create a popup template for the FeatureLayer
+      const popupTemplate = {
+        title: "{NAME}",
+        content: "Population: {EW}",
+      };
+
+      // Apply the popup template to the FeatureLayer
+      layer.popupTemplate = popupTemplate;
+
       view.when(() => {
         const sketch = new Sketch({
           layer: graphicsLayer,
@@ -64,6 +74,17 @@ export class MapComponent implements OnInit {
 
         // Add layer to map
         view.map.add(layer);
+
+        // Create a Popup widget instance
+        const popup = new Popup({
+          view: view
+        });
+
+        // Add the Popup widget to the view
+        view.ui.add(popup, 'top-right');
+
+
+
       });
     });
 
